@@ -1,0 +1,100 @@
+---
+title: "AMAZON"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
+---
+
+```{r setup, include=FALSE}
+library(flexdashboard)
+```
+
+Column {data-width=500}
+-----------------------------------------------------------------------
+
+### Genre
+
+```{r}
+library(flexdashboard)
+library(billboarder)
+library(dplyr)
+
+
+setwd("C:\\College\\R Project\\R Case Study")
+
+
+casestudy<- read.csv("riya.csv")
+cat <- table(casestudy$Genre)
+
+
+billboarder() %>% bb_piechart(cat)
+
+```
+
+### Time
+
+```{r}
+library(flexdashboard)
+library(billboarder)
+library(dplyr)
+
+
+setwd("C:\\College\\R Project\\R Case Study")
+
+
+casestudy<- read.csv("riya.csv")
+mat <- table(casestudy$Time)
+
+
+billboarder() %>% bb_piechart(mat)
+
+```
+
+
+Column {data-width=500}
+-----------------------------------------------------------------------
+
+### Popularity
+
+```{r}
+library(flexdashboard)
+library(billboarder)
+library(dplyr)
+
+
+setwd("C:\\College\\R Project\\R Case Study")
+
+
+casestudy<- read.csv("riya.csv")
+mat <- table(casestudy$Popularity)
+
+
+billboarder() %>% bb_piechart(mat)
+
+
+
+
+
+```
+
+### Age Group
+
+```{r}
+library(flexdashboard)
+library(billboarder)
+library(dplyr)
+
+
+setwd("C:\\College\\R Project\\R Case Study")
+
+
+casestudy<- read.csv("riya.csv")
+mat <- table(casestudy$Age)
+
+
+billboarder() %>% bb_piechart(mat)
+
+
+```
+
